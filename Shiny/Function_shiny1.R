@@ -20,7 +20,7 @@ est_h2 = function(K, Kr, a){
   Tr = -qnorm(Kr, 0, 1)
   z  = dnorm(T)
   i  = z / K
-  h2 = (T - Tr * sqrt(1-(1-T/i)*(T^2-Tr^2))) / (a * i+(i-T)*Tr^2)
+  h2 = (T - Tr * sqrt(1-(1-T/i)*(T^2-Tr^2))) / (a *( i+(i-T)*Tr^2))
   return(list("h2"=h2, "T"=T, "Tr"=Tr, "z"=z, "i"=i))
 }
 
